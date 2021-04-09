@@ -7,6 +7,8 @@ import multer from "multer";
 // eslint-disable-next-line import/extensions
 import { listCategoriesController } from "../modules/cars/useCases/listCategory";
 import { createCategoryController } from "../modules/cars/useCases/createCategory";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { importCategoryController } from "../modules/cars/useCases/importCategory";
 
 const categoriesRoutes = Router();
 
@@ -23,7 +25,7 @@ categoriesRoutes.get("/", (request, response) => {
 });
 
 categoriesRoutes.post("/import", upload.single("file"), (request, response) => {
-  return response.send();
+  return importCategoryController.handle(request, response);
 });
 
 export { categoriesRoutes };
