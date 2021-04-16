@@ -1,5 +1,5 @@
 /* eslint-disable import/no-unresolved */
-import { Specification } from "../../model/Specification";
+import { Specification } from "../../entities/Specification";
 import {
   ISpecificationsRepository,
   ICreateSpecificationDTO,
