@@ -1,7 +1,7 @@
 {
   "type": "postgres",
   "host": "localhost",
-  "username": "",
-  "password": "",
+  "username": "atmi",
+  "password": "atmi",
   "database": "rentalx"
 }
