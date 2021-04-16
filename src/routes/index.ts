@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unresolved */
 import { Router } from "express";
 
 import { categoriesRoutes } from "./categories.routes";

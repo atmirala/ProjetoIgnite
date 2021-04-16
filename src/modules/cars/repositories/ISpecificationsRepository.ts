@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unresolved */
 import { Specification } from "../entities/Specification";
 
 interface ICreateSpecificationDTO {
@@ -7,8 +6,8 @@ interface ICreateSpecificationDTO {
 }
 
 interface ISpecificationsRepository {
-  create({ description, name }: ICreateSpecificationDTO): void;
-  findByName(name: string): Specification;
+  create({ description, name }: ICreateSpecificationDTO): Promise<void>;
+  findByName(name: string): Promise<Specification>;
 }
 
 export { ISpecificationsRepository, ICreateSpecificationDTO };

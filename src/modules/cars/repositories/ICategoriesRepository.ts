@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-unresolved
 import { Category } from "../entities/Category";
 
 interface ICreateCategoryDTO {

@@ -1,16 +1,13 @@
-/* eslint-disable import/extensions */
-/* eslint-disable import/no-absolute-path */
 /* eslint-disable import/no-unresolved */
-// eslint-disable-next-line import/no-unresolved
 import express from "express";
 import swaggerUi from "swagger-ui-express";
 
 import { router } from "./routes";
 import swaggerFile from "./swagger.json";
 
-import "./database/index.ts";
+import "./database/index";
 
-// eslint-disable-next-line import/no-unresolved
+import "./shared/container";
 
 const app = express();
 

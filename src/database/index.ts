@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unresolved */
 import { createConnection, getConnectionOptions } from "typeorm";
 
 interface IOptions {

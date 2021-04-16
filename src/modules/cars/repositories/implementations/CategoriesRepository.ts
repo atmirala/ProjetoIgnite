@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unresolved */
 import { getRepository, Repository } from "typeorm";
 
 import { Category } from "../../entities/Category";
