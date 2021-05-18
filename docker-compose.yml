@@ -1,7 +1,7 @@
-version: "3.8"
+version: "3.9"
 
 services:
-  database_ignite:
+  database:
     image: postgres
     container_name: database_ignite
     restart: always
@@ -14,18 +14,20 @@ services:
     volumes:
       - pgdata:/data/postgres
 
-  app:
-    build: .
-    container_name: rentalx
-    ports:
-      - 3333:3333
-    volumes:
-      - type: bind
-        source: .
-        target: /usr/app
-    links:
-      - database_ignite
-    depends_on:
-      - database_ignite
+  # app:
+  #   build: .
+  #   container_name: rental
+  #   restart: always
+  #   ports:
+  #     - 3333:3333
+  #     - 9229:9229
+  #   volumes:
+  #     - .:/usr/app
+  #   links:
+  #     - database
+  #   depends_on:
+  #     - database
 
-volumes: pgdata:4
+volumes:
+  pgdata:
+    driver: local
