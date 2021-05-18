@@ -28,5 +28,4 @@ services:
     depends_on:
       - database_ignite
 
-volumes:
-  pgdata:
+volumes: pgdata:4

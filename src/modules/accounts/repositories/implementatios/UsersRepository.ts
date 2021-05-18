@@ -1,7 +1,10 @@
-import { ICreateUserDTO } from "modules/accounts/dtos/ICreateUserDTO";
-import { User } from "modules/accounts/entities/User";
+/* eslint-disable import/extensions */
+
 import { getRepository, Repository } from "typeorm";
 
+// eslint-disable-next-line import/extensions
+import { ICreateUserDTO } from "../../dtos/ICreateUserDTO";
+import { User } from "../../entities/User";
 import { IUsersRepository } from "../IUsersRepository";
 
 class UsersRepository implements IUsersRepository {
