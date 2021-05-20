@@ -40,7 +40,7 @@ class AuthenticateUserUseCase {
 
     const token = sign({}, "1dfb0b4ae30f630590ee6c717c4cbde8", {
       subject: user,
-      id,
+      keyid,
       expiresIn: "1d",
     });
 
