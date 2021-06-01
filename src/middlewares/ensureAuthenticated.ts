@@ -25,7 +25,7 @@ export async function ensureAuthenticated(
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { sub: user_id } = verify(
       token,
-      "1dfb0b4ae30f630590ee6c717c4cbde8"
+      "3261140aa7218fd0060ac1676be7e0cf"
     ) as IPayload;
 
     const usersRepository = new UsersRepository();

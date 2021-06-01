@@ -1,4 +1,4 @@
-import { compare } from "bcrypt";
+import { compare } from "bcryptjs";
 import { sign } from "jsonwebtoken";
 import { inject, injectable } from "tsyringe";
 
@@ -38,13 +38,12 @@ class AuthenticateUserUseCase {
       throw new AppError("Email or password incorrect!");
     }
 
-    const token = sign({}, "1dfb0b4ae30f630590ee6c717c4cbde8", {
-      subject: user,
-      keyid,
+    const token = sign({}, "3261140aa7218fd0060ac1676be7e0cf", {
+      subject: user.id,
       expiresIn: "1d",
     });
 
-    const tokenReturn = {
+    const tokenReturn: IResponse = {
       token,
       user: {
         name: user.name,
