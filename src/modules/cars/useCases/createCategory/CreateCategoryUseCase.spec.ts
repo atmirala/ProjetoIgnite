@@ -1,15 +1,15 @@
 import { AppError } from "../../../../errors/AppError";
-import { CategoriesRepositoryInMemory } from "../../repositories/in-memory/CategoriesRepositoryInMemory";
+import { LocalCategoriesRepository } from "../../repositories/local/LocalCategoriesRepository";
 import { CreateCategoryUseCase } from "./CreateCategoryUseCase";
 
 let createCategoryUseCase: CreateCategoryUseCase;
-let categoriesRepositoryInMemory: CategoriesRepositoryInMemory;
+let localCategoriesRepository: LocalCategoriesRepository;
 
 describe("Create category", () => {
   beforeEach(() => {
-    categoriesRepositoryInMemory = new CategoriesRepositoryInMemory();
+    localCategoriesRepository = new LocalCategoriesRepository();
     createCategoryUseCase = new CreateCategoryUseCase(
-      categoriesRepositoryInMemory
+      localCategoriesRepository
     );
   });
 
@@ -23,7 +23,7 @@ describe("Create category", () => {
       description: category.description,
     });
 
-    const categoryCreated = await categoriesRepositoryInMemory.findByName(
+    const categoryCreated = await localCategoriesRepository.findByName(
       category.name
     );
 

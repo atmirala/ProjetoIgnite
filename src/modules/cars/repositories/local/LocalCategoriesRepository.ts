@@ -4,7 +4,7 @@ import {
   ICreateCategoryDTO,
 } from "../ICategoriesRepository";
 
-class CategoriesRepositoryInMemory implements ICategoriesRepository {
+class LocalCategoriesRepository implements ICategoriesRepository {
   categories: Category[] = [];
 
   async findByName(name: string): Promise<Category> {
@@ -27,4 +27,4 @@ class CategoriesRepositoryInMemory implements ICategoriesRepository {
   }
 }
 
-export { CategoriesRepositoryInMemory };
+export { LocalCategoriesRepository };
