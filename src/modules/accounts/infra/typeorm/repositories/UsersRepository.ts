@@ -3,9 +3,9 @@
 import { getRepository, Repository } from "typeorm";
 
 // eslint-disable-next-line import/extensions
-import { ICreateUserDTO } from "../../dtos/ICreateUserDTO";
-import { User } from "../../entities/User";
-import { IUsersRepository } from "../IUsersRepository";
+import { ICreateUserDTO } from "@modules/accounts/dtos/ICreateUserDTO";
+import { User } from "@modules/accounts/infra/typeorm/entities/User";
+import { IUsersRepository } from "@modules/accounts/repositories/IUsersRepository";
 
 class UsersRepository implements IUsersRepository {
   private repository: Repository<User>;
