@@ -1,5 +1,6 @@
-import { AppError } from "../../../../errors/AppError";
-import { LocalCategoriesRepository } from "../../repositories/local/LocalCategoriesRepository";
+import { AppError } from "@errors/AppError";
+import { LocalCategoriesRepository } from "@modules/cars/repositories/local/LocalCategoriesRepository";
+
 import { CreateCategoryUseCase } from "./CreateCategoryUseCase";
 
 let createCategoryUseCase: CreateCategoryUseCase;
