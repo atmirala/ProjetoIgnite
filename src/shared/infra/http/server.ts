@@ -9,7 +9,7 @@ import { AppError } from "@shared/errors/AppError";
 import swaggerFile from "../../../swagger.json";
 import { router } from "./routes";
 
-import "../../../database/index";
+import "@shared/infra/typeorm/index";
 
 import "@shared/container";
 
